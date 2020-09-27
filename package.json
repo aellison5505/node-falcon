@@ -1,0 +1,35 @@
+{
+  "name": "falcon-node",
+  "version": "0.0.0",
+  "description": "Node addon for Falcon Post Quantum Signature",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "watch" : "tsc -w",
+    "buildTS": "tsc" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aellison5505/faclon-node.git"
+  },
+  "keywords": [
+    "falcon",
+    "cryptoPQ",
+    "Post",
+    "Quantum"
+  ],
+  "author": "Anthony Ellison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aellison5505/faclon-node/issues"
+  },
+  "homepage": "https://github.com/aellison5505/faclon-node#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.62",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.0.3",
+    "typescript": "^4.0.3"
+  }
+}
