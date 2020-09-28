@@ -1,4 +1,4 @@
-import { createKeyPair, createSignature, verifySignature } from '../lib/falcon1024';
+import { createKeyPair, createSignature, verifySignature } from '../addon/falcon1024';
 
 export interface keys {
     publicKey: Buffer;
