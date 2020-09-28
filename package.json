@@ -9,7 +9,7 @@
     "cmake-config": "npx cmake-js configure",
     "cmake-compile": "npx cmake-js compile",
     "install": "npx cmake-js compile",
-    "cmake-clean": "npx cmake-js clean && rm -rf dep/falcon-1024/build/*",
+    "cmake-clean": "npx cmake-js clean && rm -rf dep/falcon-1024/build lib/*.node src/lib*.*",
     "copyLib": "cp ./build/Release/falcon1024.node ./lib/",
     "test": "mocha",
     "watch": "tsc -w",
