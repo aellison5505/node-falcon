@@ -1,7 +1,0 @@
-/mnt/d/dev/falcon-node/build/CMakeFiles/install.dir
-/mnt/d/dev/falcon-node/build/CMakeFiles/list_install_components.dir
-/mnt/d/dev/falcon-node/build/CMakeFiles/rebuild_cache.dir
-/mnt/d/dev/falcon-node/build/CMakeFiles/falcon1024.dir
-/mnt/d/dev/falcon-node/build/CMakeFiles/install/strip.dir
-/mnt/d/dev/falcon-node/build/CMakeFiles/install/local.dir
-/mnt/d/dev/falcon-node/build/CMakeFiles/edit_cache.dir

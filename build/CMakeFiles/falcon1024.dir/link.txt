@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,falcon1024.node -o ../lib/falcon1024.node CMakeFiles/falcon1024.dir/src/falcon1024.cc.o  -L/mnt/d/dev/falcon-node/src -lfalcon-1024 -Wl,-rpath,/mnt/d/dev/falcon-node/src: 
