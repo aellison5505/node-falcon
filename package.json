@@ -4,7 +4,7 @@
   "description": "Node addon for Falcon Post Quantum Signature",
   "main": "lib/index.js",
   "scripts": {
-    "preinstall": "mkdir -p cd dep/falcon-1024/build & dep/falcon-1024/build && cmake .. && make",
+    "preinstall": "mkdir -p dep/falcon-1024/build && cd dep/falcon-1024/build && cmake .. && make ",
     "cmake": "npx cmake-js install",
     "cmake-config": "npx cmake-js configure",
     "cmake-compile" : "npx cmake-js compile",
