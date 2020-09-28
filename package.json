@@ -6,7 +6,7 @@
   "scripts": {
     "cmake": "npx cmake-js -G 'Unix Makefiles' install",
     "cmake-config": "npx cmake-js -G 'Unix Makefiles' configure",
-    "cmake-compile": "npx cmake-js -G 'Unix Makefiles' compile && cp ./build/Release/falcon1024.node ./lib/",
+    "cmake-compile": "npx cmake-js -G 'Unix Makefiles' compile & cp ./build/Release/falcon1024.node ./lib/",
     "test": "mocha",
     "watch": "tsc -w",
     "buildTS": "tsc"

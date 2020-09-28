@@ -13,7 +13,12 @@ extern "C" {
 
 #include <napi.h>
 
-#define crypto_sign_keypair PQCLEAN_FALCON1024_CLEAN_crypto_sign_keypair
+#define keypair PQCLEAN_FALCON1024_CLEAN_crypto_sign_keypair
+
+#define sign PQCLEAN_FALCON1024_CLEAN_crypto_sign_signature
+
+#define verify PQCLEAN_FALCON1024_CLEAN_crypto_sign_verify
+
 
 
 
