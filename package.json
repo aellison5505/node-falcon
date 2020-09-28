@@ -1,18 +1,18 @@
 {
   "name": "falcon-node",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Node addon for Falcon Post Quantum Signature",
   "main": "lib/index.js",
   "scripts": {
     "pre-old": "mkdir -p dep/falcon-1024/build && cd dep/falcon-1024/build && cmake .. && make ",
-    "preinstall" : "npx cmake-js -d dep/falcon-1024 compile",
+    "preinstall": "npx cmake-js -d dep/falcon-1024 compile",
     "cmake": "npx cmake-js install",
     "cmake-config": "npx cmake-js configure",
     "cmake-compile": "npx cmake-js compile",
     "install": "npx cmake-js compile",
     "cmake-clean": "npx cmake-js clean && npx cmake-js -d dep/falcon-1024 clean",
     "copyLib": "cp ./build/Release/falcon1024.node ./lib/",
-    "clean" : " rm -rf dep/falcon-1024/build lib/*.node src/lib*.*",
+    "clean": " rm -rf dep/falcon-1024/build lib/*.node src/lib*.*",
     "test": "mocha",
     "watch": "tsc -w",
     "buildTS": "tsc"
