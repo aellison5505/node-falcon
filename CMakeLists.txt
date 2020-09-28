@@ -19,7 +19,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
 install(TARGETS ${PROJECT_NAME}
     LIBRARY DESTINATION lib )
 
-target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} libfalcon-1024.so)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} falcon-1024)
 
 execute_process(COMMAND node -p "require('node-addon-api').include"
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
