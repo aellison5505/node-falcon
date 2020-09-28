@@ -4,6 +4,8 @@ project (falcon1024)
 
 set (CMAKE_CXX_STANDARD 11)
 
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
+
 include_directories(${CMAKE_JS_INC} src)
 
 link_directories(${CMAKE_SOURCE_DIR}/src)

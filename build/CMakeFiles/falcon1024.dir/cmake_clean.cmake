@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/falcon1024.dir/src/falcon1024.cc.o"
-  "Release/falcon1024.pdb"
-  "Release/falcon1024.node"
+  "../lib/falcon1024.pdb"
+  "../lib/falcon1024.node"
 )
 
 # Per-language clean rules from dependency scanning.
