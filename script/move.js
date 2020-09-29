@@ -11,7 +11,7 @@ let main = async () => {
         copyFileSync(`build/Release/${item}`,`libaddon/${item}`);
    });
     } catch (err) {
-        console.log('No files to move', err);
+        console.log('No files to move');
     }
 };
 main();
