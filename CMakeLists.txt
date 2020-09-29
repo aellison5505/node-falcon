@@ -8,19 +8,17 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libaddon)
 
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
 
-project (falcon1024 C CXX)
+project (falcon1024 CXX)
 
-file(GLOB SOURCE_FILES "src/*.cc" "src/*.h" "dep/falcon-1024/src/*.c" "dep/falcon-1024/src/*.h")
+add_subdirectory(${CMAKE_SOURCE_DIR}/dep/falcon-1024)
 
+#file(GLOB SOURCE_FILES "src/*.cc" "src/*.h" "dep/falcon-1024/src/*.c" "dep/falcon-1024/src/*.h")
+file(GLOB SOURCE_FILES "src/*.cc" "src/*.h")
 include_directories(${CMAKE_JS_INC})
 
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES} ${CMAKE_JS_SRC})
+add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES} ${CMAKE_JS_SRC} $<TARGET_OBJECTS:falcon-1024>)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
-set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 11)
-
-
-#link_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/dep/falcon-1024/build/Release)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
 

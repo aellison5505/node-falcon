@@ -10,7 +10,7 @@
     "cmake": "npx cmake-js install",
     "cmake-config": "npx cmake-js",
     "cmake-compile": "npx cmake-js compile",
-    "cmake-clean": "npx cmake-js clean && node script/clean.js",
+    "cmake-clean": "npx cmake-js clean && npx cmake-js -d dep/falcon-1024 clean && node script/clean.js",
     "test": "mocha",
     "watch": "tsc -w",
     "buildTS": "tsc"

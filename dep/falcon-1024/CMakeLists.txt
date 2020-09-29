@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
+set(CMAKE_POSITION_INDEPENDENT_CODE true)
+set (CMAKE_C_STANDARD 99)
 
-project (falcon-1024)
-
-set (CMAKE_CXX_STANDARD 99)
+project (falcon-1024 C)
 
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../src)
 
@@ -12,8 +12,7 @@ include_directories(src)
 
 file(GLOB SOURCE_FILES "src/*.c" "src/*h")
 
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+add_library(falcon-1024 OBJECT ${SOURCE_FILES})
 
-set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C)
 
 
