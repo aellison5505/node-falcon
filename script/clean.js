@@ -9,7 +9,7 @@ let main = async () => {
          unlinkSync(`libaddon/${item}`);
     });
      } catch (err) {
-         console.log('No files to moved!');
+         console.log('No more files to clean!');
      }
  };
  main();
