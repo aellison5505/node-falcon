@@ -4,7 +4,7 @@ project (falcon1024)
 
 set (CMAKE_CXX_STANDARD 11)
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/addon)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libaddon)
 
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
 
@@ -32,8 +32,8 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${NODE_ADDON_API_DIR})
 
 install(TARGETS ${PROJECT_NAME} 
                     CONFIGURATIONS Release
-                    LIBRARY DESTINATION "addon"
-                    ARCHIVE DESTINATION "addon"
-                    RUNTIME DESTINATION "addon"
+                    LIBRARY DESTINATION "libaddon"
+                    ARCHIVE DESTINATION "libaddon"
+                    RUNTIME DESTINATION "libaddon"
                     COMPONENT library)
 
