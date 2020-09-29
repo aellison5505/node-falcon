@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 add_definitions(-DNAPI_EXPERIMENTAL)
 add_definitions(-DNAPI_VERSION=3)
 
+
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libaddon)
 
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
@@ -14,6 +15,10 @@ file(GLOB SOURCE_FILES "src/*.cc" "src/*.h" "dep/falcon-1024/src/*.c" "dep/falco
 include_directories(${CMAKE_JS_INC})
 
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES} ${CMAKE_JS_SRC})
+
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
+set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 11)
+
 
 #link_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/dep/falcon-1024/build/Release)
 
