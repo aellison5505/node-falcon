@@ -3,6 +3,8 @@ const { copyFileSync, readdirSync} = require('fs');
 let main = async () => {
    // await copyFile();
    try{
+    if(!existsSync('libaddon'))
+        mkdirSync('libaddon');
    let files = readdirSync('build/Release');
    files.forEach((item) => {
        console.log(item);
