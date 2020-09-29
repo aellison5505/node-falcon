@@ -9,7 +9,7 @@ let main = async () => {
          unlinkSync(`addon/${item}`);
     });
      } catch (err) {
-         console.log('No files to moved!');
+         console.log('No files to moved!', err);
      }
  };
  main();

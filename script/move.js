@@ -9,7 +9,7 @@ let main = async () => {
         copyFileSync(`build/Release${item}`,`addon/${item}`);
    });
     } catch (err) {
-        console.log('No files to move');
+        console.log('No files to move', err);
     }
 };
 main();
