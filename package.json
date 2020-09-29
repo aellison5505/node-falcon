@@ -1,6 +1,6 @@
 {
   "name": "falcon-node",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Node addon for Falcon Post Quantum Signature",
   "main": "lib/index.js",
   "scripts": {
