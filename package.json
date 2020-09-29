@@ -6,7 +6,7 @@
   "scripts": {
     "preold": "npx cmake-js -d dep/falcon-1024 compile",
     "install": "npx cmake-js clean && npx cmake-js compile",
-    "postinstall": "node script/move.js",
+    "postinstall": "node script/move.js && npm run test",
     "cmake": "npx cmake-js install",
     "cmake-config": "npx cmake-js",
     "cmake-compile": "npx cmake-js compile",
@@ -32,8 +32,6 @@
   },
   "homepage": "https://github.com/aellison5505/faclon-node#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.1.3",
     "typedoc": "^0.19.2",
     "typedoc-plugin-markdown": "^3.0.3",
     "typescript": "^4.0.3"
@@ -42,6 +40,8 @@
     "@types/node": "^12.12.62",
     "cmake-js": "^6.1.0",
     "jshint": "^2.12.0",
-    "node-addon-api": "^3.0.2"
+    "node-addon-api": "^3.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
   }
 }
