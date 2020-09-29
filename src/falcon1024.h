@@ -19,9 +19,4 @@ extern "C" {
 
 #define verify PQCLEAN_FALCON1024_CLEAN_crypto_sign_verify
 
-
-
-
-
-
 #endif

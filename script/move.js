@@ -1,4 +1,4 @@
-const { copyFileSync, readdirSync} = require('fs');
+const { copyFileSync, readdirSync, existsSync, mkdirSync} = require('fs');
 
 let main = async () => {
    // await copyFile();

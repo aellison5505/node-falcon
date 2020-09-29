@@ -1,28 +1,25 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10)
 
-project (falcon1024)
-
-set (CMAKE_CXX_STANDARD 11)
+add_definitions(-DNAPI_EXPERIMENTAL)
+add_definitions(-DNAPI_VERSION=3)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libaddon)
 
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
 
-add_definitions(-DNAPI_VERSION=3)
+project (falcon1024 C CXX)
 
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+file(GLOB SOURCE_FILES "src/*.cc" "src/*.h" "dep/falcon-1024/src/*.c" "dep/falcon-1024/src/*.h")
 
-include_directories(${CMAKE_JS_INC} src dep/falcon-1024/build/Release)
-
-link_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/dep/falcon-1024/build/Release)
-
-file(GLOB SOURCE_FILES "src/*.cc" "src/*h")
+include_directories(${CMAKE_JS_INC})
 
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES} ${CMAKE_JS_SRC})
 
+#link_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/dep/falcon-1024/build/Release)
+
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
 
-target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} falcon-1024)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB})
 
 execute_process(COMMAND node -p "require('node-addon-api').include"
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
