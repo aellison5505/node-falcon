@@ -30,10 +30,9 @@ describe('Falcon 1024', () =>{
     }));
     describe("Verify", (() => {
         it('should return verified', (async () => {
-            let verify = this.falcon.verifySignature(this.signature, this.message, this.keys.publicKey);
-            doesNotReject(verify)
-            .then()
+            let verify = await this.falcon.verifySignature(this.signature, this.message, this.keys.publicKey)
             .catch(err => console.log(err.message));
+            expect(verify).to.equal(0);
         }));
     }));
     describe("Rejects", (() => {

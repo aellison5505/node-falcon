@@ -6,6 +6,6 @@ export interface keys {
 export declare class Falcon1024 {
     createKeys(): Promise<keys>;
     createSignature(message: Buffer, privateKey: Buffer): Promise<Buffer>;
-    verifySignature(signature: Buffer, message: Buffer, publicKey: Buffer): Promise<Buffer>;
+    verifySignature(signature: Buffer, message: Buffer, publicKey: Buffer): Promise<number>;
 }
 //# sourceMappingURL=index.d.ts.map
