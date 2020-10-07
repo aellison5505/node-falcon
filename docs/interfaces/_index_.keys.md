@@ -1,6 +1,6 @@
 **node-falcon**
 
-> [Globals](../globals.md) / ["index"](../modules/_index_.md) / keys
+> [README](../README.md) / [Globals](../globals.md) / ["index"](../modules/_index_.md) / keys
 
 # Interface: keys
 
@@ -23,7 +23,7 @@ Key pair for falcon 1024 signature.
 
 •  **privateKey**: Buffer
 
-*Defined in [index.ts:9](https://github.com/aellison5505/faclon-node/blob/b66e27b/src/index.ts#L9)*
+*Defined in [index.ts:9](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L9)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 •  **publicKey**: Buffer
 
-*Defined in [index.ts:8](https://github.com/aellison5505/faclon-node/blob/b66e27b/src/index.ts#L8)*
+*Defined in [index.ts:8](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L8)*

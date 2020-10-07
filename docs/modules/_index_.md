@@ -1,6 +1,6 @@
 **node-falcon**
 
-> [Globals](../globals.md) / "index"
+> [README](../README.md) / [Globals](../globals.md) / "index"
 
 # Module: "index"
 

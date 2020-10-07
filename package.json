@@ -14,7 +14,7 @@
     "test": "mocha",
     "watch": "tsc -w",
     "buildTS": "tsc",
-    "build-docs": "touch ./readme.md && rm ./readme.md && npx typedoc --mode modules --theme markdown --out /mnt/d/dev/node-falcon-1024/docs /mnt/d/dev/node-falcon-1024/src && npx concat-md --decrease-title-levels ./docs > README.md"
+    "build-docs": "touch ./readme.md && rm ./readme.md && npx typedoc --mode modules --theme markdown --out /mnt/d/dev/node-falcon-1024/docs --readme /mnt/d/dev/node-falcon-1024/readmeHeader/readhead.md /mnt/d/dev/node-falcon-1024/src && npx concat-md --decrease-title-levels ./docs > README.md"
   },
   "repository": {
     "type": "git",

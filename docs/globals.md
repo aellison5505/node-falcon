@@ -1,6 +1,6 @@
 **node-falcon**
 
-> Globals
+> [README](README.md) / Globals
 
 # node-falcon
 
