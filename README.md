@@ -7,6 +7,11 @@
 
 [![Build Status](https://travis-ci.com/aellison5505/node-falcon.svg?branch=master)](https://travis-ci.com/aellison5505/node-falcon)
 
+### Requirements
+* CMake with buildtools for your OS.
+* NodeJS
+* Typescript - optional
+
 
 <a name="classes_index_falcon1024md"></a>
 
@@ -17,8 +22,8 @@
 # Class: Falcon1024
 
 Promise interface for Post Quantum falcon 1024 signature algorithm.
-Dependency code acquired from liboqs
-https://github.com/open-quantum-safe/liboqs
+Dependency code acquired from PQClean
+https://github.com/PQClean/PQClean
 
 ## Hierarchy
 
@@ -38,7 +43,7 @@ https://github.com/open-quantum-safe/liboqs
 
 ▸ **createKeys**(): Promise\<[keys](#interfaces_index_keysmd)>
 
-*Defined in [index.ts:23](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L23)*
+*Defined in [index.ts:23](https://github.com/aellison5505/faclon-node/blob/06bd32b/src/index.ts#L23)*
 
 Create key pair for signature.
 
@@ -52,7 +57,7 @@ ___
 
 ▸ **createSignature**(`message`: Buffer, `privateKey`: Buffer): Promise\<Buffer>
 
-*Defined in [index.ts:43](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L43)*
+*Defined in [index.ts:43](https://github.com/aellison5505/faclon-node/blob/06bd32b/src/index.ts#L43)*
 
 Creates and returns the falcon 1024 signature.
 
@@ -73,7 +78,7 @@ ___
 
 ▸ **verifySignature**(`signature`: Buffer, `message`: Buffer, `publicKey`: Buffer): Promise\<number>
 
-*Defined in [index.ts:66](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L66)*
+*Defined in [index.ts:66](https://github.com/aellison5505/faclon-node/blob/06bd32b/src/index.ts#L66)*
 
 Verifies the message with the public key
 
@@ -132,7 +137,7 @@ Key pair for falcon 1024 signature.
 
 •  **privateKey**: Buffer
 
-*Defined in [index.ts:9](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L9)*
+*Defined in [index.ts:9](https://github.com/aellison5505/faclon-node/blob/06bd32b/src/index.ts#L9)*
 
 ___
 
@@ -140,7 +145,7 @@ ___
 
 •  **publicKey**: Buffer
 
-*Defined in [index.ts:8](https://github.com/aellison5505/faclon-node/blob/36c6fdf/src/index.ts#L8)*
+*Defined in [index.ts:8](https://github.com/aellison5505/faclon-node/blob/06bd32b/src/index.ts#L8)*
 
 
 <a name="modules_index_md"></a>

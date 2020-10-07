@@ -4,17 +4,16 @@
   "description": "Node addon for Falcon 1024 Post Quantum Signature",
   "main": "lib/index.js",
   "scripts": {
-    "preold": "npx cmake-js -d dep/falcon-1024 compile",
     "install": "npx cmake-js clean && npx cmake-js compile",
     "postinstall": "node script/move.js && npm run test",
     "cmake": "npx cmake-js install",
     "cmake-config": "npx cmake-js",
     "cmake-compile": "npx cmake-js compile",
-    "cmake-clean": "npx cmake-js clean && npx cmake-js -d dep/falcon-1024 clean && node script/clean.js",
+    "cmake-clean": "npx cmake-js clean && node script/clean.js",
     "test": "mocha",
     "watch": "tsc -w",
     "buildTS": "tsc",
-    "build-docs": "touch ./readme.md && rm ./readme.md && npx typedoc --mode modules --theme markdown --out /mnt/d/dev/node-falcon-1024/docs --readme /mnt/d/dev/node-falcon-1024/readmeHeader/readhead.md /mnt/d/dev/node-falcon-1024/src && npx concat-md --decrease-title-levels ./docs > README.md"
+    "build-docs": "touch toc ./readme.md && rm ./readme.md && npx typedoc --mode modules --theme markdown --out /mnt/d/dev/node-falcon-1024/docs --readme /mnt/d/dev/node-falcon-1024/readmeHeader/readhead.md /mnt/d/dev/node-falcon-1024/src && npx concat-md --decrease-title-levels ./docs > README.md"
   },
   "repository": {
     "type": "git",

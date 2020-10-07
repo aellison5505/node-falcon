@@ -11,8 +11,8 @@ export interface keys {
 
 /**
  * Promise interface for Post Quantum falcon 1024 signature algorithm.
- * Dependency code acquired from liboqs
- * https://github.com/open-quantum-safe/liboqs
+ * Dependency code acquired from PQClean
+ * https://github.com/PQClean/PQClean
  */
 export class Falcon1024 {
 

@@ -5,35 +5,20 @@ add_definitions(-DNAPI_VERSION=3)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
 
+set(CMAKE_POSITION_INDEPENDENT_CODE true)
+
 project (node-falcon CXX)
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/dep/falcon-1024)
+add_subdirectory(${CMAKE_SOURCE_DIR}/dep)
 
-#file(GLOB SOURCE_FILES "src/*.cc" "src/*.h" "dep/falcon-1024/src/*.c" "dep/falcon-1024/src/*.h")
-file(GLOB SOURCE_FILES "src/*.cc" "src/*.h")
+add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 
-include_directories(${CMAKE_JS_INC})
-
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES} ${CMAKE_JS_SRC} $<TARGET_OBJECTS:falcon-1024>)
+add_library(${PROJECT_NAME} SHARED $<TARGET_OBJECTS:falcon-addon> $<TARGET_OBJECTS:common> $<TARGET_OBJECTS:falcon-clean>)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 
+target_link_libraries(${PROJECT_NAME}  ${CMAKE_JS_LIB})
+
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
 
-target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB})
-
-execute_process(COMMAND node -p "require('node-addon-api').include"
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE NODE_ADDON_API_DIR
-        )
-string(REPLACE "\n" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
-string(REPLACE "\"" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
-target_include_directories(${PROJECT_NAME} PRIVATE ${NODE_ADDON_API_DIR})
-
-install(TARGETS ${PROJECT_NAME} 
-                    CONFIGURATIONS Release
-                    LIBRARY DESTINATION "lib"
-                    ARCHIVE DESTINATION "lib"
-                    RUNTIME DESTINATION "lib"
-                    COMPONENT library)
 
