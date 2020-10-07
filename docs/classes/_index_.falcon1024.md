@@ -1,16 +1,6 @@
-
-<a name="readmemd"></a>
-
 **node-falcon**
 
-> [Globals](#globalsmd)
-
-
-<a name="classes_index_falcon1024md"></a>
-
-**node-falcon**
-
-> [Globals](#globalsmd) / ["index"](#modules_index_md) / Falcon1024
+> [Globals](../globals.md) / ["index"](../modules/_index_.md) / Falcon1024
 
 # Class: Falcon1024
 
@@ -26,21 +16,21 @@ https://github.com/open-quantum-safe/liboqs
 
 ### Methods
 
-* [createKeys](#createkeys)
-* [createSignature](#createsignature)
-* [verifySignature](#verifysignature)
+* [createKeys](_index_.falcon1024.md#createkeys)
+* [createSignature](_index_.falcon1024.md#createsignature)
+* [verifySignature](_index_.falcon1024.md#verifysignature)
 
 ## Methods
 
 ### createKeys
 
-▸ **createKeys**(): Promise\<[keys](#interfaces_index_keysmd)>
+▸ **createKeys**(): Promise\<[keys](../interfaces/_index_.keys.md)>
 
 *Defined in [index.ts:23](https://github.com/aellison5505/faclon-node/blob/b66e27b/src/index.ts#L23)*
 
 Create key pair for signature.
 
-**Returns:** Promise\<[keys](#interfaces_index_keysmd)>
+**Returns:** Promise\<[keys](../interfaces/_index_.keys.md)>
 
 Promise with keys
 
@@ -86,75 +76,3 @@ Name | Type | Description |
 **Returns:** Promise\<number>
 
 0 if verified, throws error if not verified.
-
-
-<a name="globalsmd"></a>
-
-**node-falcon**
-
-> Globals
-
-# node-falcon
-
-## Index
-
-### Modules
-
-* ["index"](#modules_index_md)
-
-
-<a name="interfaces_index_keysmd"></a>
-
-**node-falcon**
-
-> [Globals](#globalsmd) / ["index"](#modules_index_md) / keys
-
-# Interface: keys
-
-Key pair for falcon 1024 signature.
-
-## Hierarchy
-
-* **keys**
-
-## Index
-
-### Properties
-
-* [privateKey](#privatekey)
-* [publicKey](#publickey)
-
-## Properties
-
-### privateKey
-
-•  **privateKey**: Buffer
-
-*Defined in [index.ts:9](https://github.com/aellison5505/faclon-node/blob/b66e27b/src/index.ts#L9)*
-
-___
-
-### publicKey
-
-•  **publicKey**: Buffer
-
-*Defined in [index.ts:8](https://github.com/aellison5505/faclon-node/blob/b66e27b/src/index.ts#L8)*
-
-
-<a name="modules_index_md"></a>
-
-**node-falcon**
-
-> [Globals](#globalsmd) / "index"
-
-# Module: "index"
-
-## Index
-
-### Classes
-
-* [Falcon1024](#classes_index_falcon1024md)
-
-### Interfaces
-
-* [keys](#interfaces_index_keysmd)
