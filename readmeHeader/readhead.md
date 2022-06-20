@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/aellison5505/node-falcon.svg?branch=master)](https://travis-ci.com/aellison5505/node-falcon)
+
+[![aellison5505](https://circleci.com/gh/aellison5505/node-falcon.svg?style=svg)](https://circleci.com/gh/aellison5505/node-falcon)
 
 ### Requirements
 * CMake with buildtools for your OS.
