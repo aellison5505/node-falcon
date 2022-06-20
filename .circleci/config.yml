@@ -34,7 +34,7 @@ jobs:
           command: yarn test
 
 workflows:
-  Build and Test:
+  Build:
     jobs:
       - build-and-test
   
